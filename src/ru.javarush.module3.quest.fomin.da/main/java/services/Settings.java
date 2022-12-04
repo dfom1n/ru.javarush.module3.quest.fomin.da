@@ -75,18 +75,19 @@ public class Settings {
         return creaturesAnswer;
     }
 
-//    public static Settings get() {
-//        Settings settings = SETTINGS;
-//
-//        if (Objects.isNull(settings)) {
-//            synchronized (Settings.class) {
-//                if (Objects.isNull(settings = SETTINGS)) {
-//                    settings = SETTINGS = new Settings(Settings.class.getClassLoader().getResourceAsStream("Settings.yaml"));
-//                }
-//            }
-//        }
-//        return settings;
-//    }
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Settings settings = (Settings) o;
+        return Objects.equals(description, settings.description) && Objects.equals(gameId, settings.gameId) && Objects.equals(firstQuestionId, settings.firstQuestionId) && Objects.equals(creaturesQuestions, settings.creaturesQuestions) && Objects.equals(creaturesAnswer, settings.creaturesAnswer);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(description, gameId, firstQuestionId, creaturesQuestions, creaturesAnswer);
+    }
+
 }
 
 
