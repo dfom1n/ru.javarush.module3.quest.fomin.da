@@ -67,6 +67,27 @@ public class Settings {
         return firstQuestionId;
     }
 
+    public List<Question> getCreaturesQuestions() {
+        return creaturesQuestions;
+    }
+
+    public List<Answer> getCreaturesAnswer() {
+        return creaturesAnswer;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Settings settings = (Settings) o;
+        return Objects.equals(description, settings.description) && Objects.equals(gameId, settings.gameId) && Objects.equals(firstQuestionId, settings.firstQuestionId) && Objects.equals(creaturesQuestions, settings.creaturesQuestions) && Objects.equals(creaturesAnswer, settings.creaturesAnswer);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(description, gameId, firstQuestionId, creaturesQuestions, creaturesAnswer);
+    }
+
 }
 
 

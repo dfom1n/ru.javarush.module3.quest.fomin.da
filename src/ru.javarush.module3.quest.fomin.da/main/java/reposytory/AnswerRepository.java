@@ -2,10 +2,7 @@ package reposytory;
 
 import model.Answer;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class AnswerRepository {
     private Map<Long, Answer> answerMap = new HashMap<>();
@@ -28,5 +25,18 @@ public class AnswerRepository {
             }
         }
         return answers;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        AnswerRepository that = (AnswerRepository) o;
+        return Objects.equals(answerMap, that.answerMap);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(answerMap);
     }
 }
