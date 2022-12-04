@@ -7,10 +7,10 @@ import java.util.List;
 import java.util.Map;
 
 public class QuestionRepository {
-    private Map<Long, Question> questionMap = new HashMap<>();
+    private Map<Integer, Question> questionMap = new HashMap<>();
 
     public QuestionRepository(List<Question> questionList) {
-        Long id;
+        Integer id;
         for (Question question : questionList) {
 //            System.out.println("id : " + question.getId() + ", questionText : " + question.getQuestionText() + ", nextQuestionId : " + question.getUsеAnswerId().toString());
             id = question.getId();
@@ -18,7 +18,7 @@ public class QuestionRepository {
         }
     }
 
-    public Question findById(Long id){
+    public Question findById(Integer id){
         return questionMap.get(id);
     }
 }

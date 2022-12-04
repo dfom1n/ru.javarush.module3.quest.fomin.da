@@ -19,8 +19,8 @@ public class Settings {
 
     private static volatile Settings SETTINGS;
     private String description;
-    private Long gameId;
-    private Long firstQuestionId;
+    private Integer gameId;
+    private Integer firstQuestionId;
     private List<Question> creaturesQuestions;
 
     private List<Answer> creaturesAnswer;
@@ -59,11 +59,11 @@ public class Settings {
         return this.description;
     }
 
-    public Long getGameId() {
+    public Integer getGameId() {
         return gameId;
     }
 
-    public Long getFirstQuestionId() {
+    public Integer getFirstQuestionId() {
         return firstQuestionId;
     }
 

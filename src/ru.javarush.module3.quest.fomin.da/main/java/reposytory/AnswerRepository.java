@@ -8,20 +8,20 @@ import java.util.List;
 import java.util.Map;
 
 public class AnswerRepository {
-    private Map<Long, Answer> answerMap = new HashMap<>();
+    private Map<Integer, Answer> answerMap = new HashMap<>();
 
     public AnswerRepository(List<Answer> answerList) {
-        Long id;
+        Integer id;
         for (Answer answer : answerList) {
             id = answer.getId();
             this.answerMap.put(id, answer);
         }
     }
 
-    public List<Answer> findById(List<Long> ids){
+    public List<Answer> findById(List<Integer> ids){
         List<Answer> answers = new ArrayList<>();
-        for (Long id : ids) {
-            for (Map.Entry<Long, Answer> answerEntry : answerMap.entrySet()) {
+        for (Integer id : ids) {
+            for (Map.Entry<Integer, Answer> answerEntry : answerMap.entrySet()) {
                 if (answerEntry.getKey() == id){
                     answers.add(answerEntry.getValue());
                 }

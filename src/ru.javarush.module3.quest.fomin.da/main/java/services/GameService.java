@@ -70,7 +70,7 @@ public class GameService {
     }
 
     //    Формирование Шага игры из вопроса и ответов, на вход получаем id вопроса
-    public StepGame findStepsGame(Long nextQuestionId){
+    public StepGame findStepsGame(Integer nextQuestionId){
         Question question = questionRepository.findById(nextQuestionId);
         List<Answer> answers = answerRepository.findById(question.getUsеAnswerId());
         return new StepGame(question, answers);
@@ -94,7 +94,7 @@ public class GameService {
 //    }
 ////
 //    public Answer selectAnswer(StepGame stepGame) {
-//        int selectAnswerId = ThreadLocalRandom.current().nextInt(stepGame.getAnswers().size());
+//        Integer selectAnswerId = ThreadLocalRandom.current().nextInt(stepGame.getAnswers().size());
 //        System.out.println(stepGame.getAnswers().size());
 //        Answer selectAnswer = stepGame.getAnswers().get(selectAnswerId);
 //        return selectAnswer;

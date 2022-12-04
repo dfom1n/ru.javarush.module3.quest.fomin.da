@@ -4,12 +4,12 @@ import java.util.List;
 import java.util.Objects;
 
 public class Question {
-    private Long id;
+    private Integer id;
     private String questionText;
     private boolean isLast;
-    private List<Long> usеAnswerId;
+    private List<Integer> usеAnswerId;
 
-    public Question(Long id, String questionText, boolean isLast, List<Long> usеAnswerId) {
+    public Question(Integer id, String questionText, boolean isLast, List<Integer> usеAnswerId) {
         this.id = id;
         this.questionText = questionText;
         this.isLast = isLast;
@@ -28,7 +28,7 @@ public class Question {
 
     public Question(){}
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
@@ -38,12 +38,20 @@ public class Question {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         Question question = (Question) o;
-        return isLast == question.isLast && id.equals(question.id) && questionText.equals(question.questionText) && usеAnswerId.equals(question.usеAnswerId);
+        return isLast == question.isLast &&
+                Objects.equals(id, question.id) &&
+                Objects.equals(questionText, question.questionText) &&
+                Objects.equals(usеAnswerId, question.usеAnswerId);
     }
 
+    //    @Generated
     @Override
     public int hashCode() {
         return Objects.hash(id, questionText, isLast, usеAnswerId);
@@ -53,11 +61,11 @@ public class Question {
         return isLast;
     }
 
-    public List<Long> getUsеAnswerId() {
+    public List<Integer> getUsеAnswerId() {
         return usеAnswerId;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -69,7 +77,7 @@ public class Question {
         isLast = last;
     }
 
-    public void setUsеAnswerId(List<Long> usеAnswerId) {
+    public void setUsеAnswerId(List<Integer> usеAnswerId) {
         this.usеAnswerId = usеAnswerId;
     }
 }

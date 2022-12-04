@@ -24,9 +24,9 @@
     <p>а вотоглафирует его Сергей Стальная Пятка - наш навигатор.</p>
     <p>А как обращаться к вам?</p>
 </div>
-<form method="post" action="gameServlet" class="text-center" style="font-size:120%;">
+<form method="post" action="/gameServlet" class="text-center" style="font-size:120%;">
     <label>Имя:
-        <input type="hidden" name="nextQuestionId" value="6">
+        <input type="hidden" name="nextQuestionId" value="2">
         <input type="text" name="name"><br />
     </label>
     <button class="btn btn-primary" type="submit">Submit</button>

@@ -3,11 +3,11 @@ package model;
 import java.util.Objects;
 
 public class Answer {
-    private Long id;
+    private Integer id;
     private String answerText;
     private Long nextQuestionId;
 
-    public Answer(Long id, String answerText, Long nextQuestionId) {
+    public Answer(Integer id, String answerText, Long nextQuestionId) {
         this.id = id;
         this.answerText = answerText;
         this.nextQuestionId = nextQuestionId;
@@ -26,18 +26,26 @@ public class Answer {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         Answer answer = (Answer) o;
-        return id.equals(answer.id) && answerText.equals(answer.answerText) && nextQuestionId.equals(answer.nextQuestionId);
+        return Objects.equals(answerText, answer.answerText) &&
+                Objects.equals(id, answer.id) &&
+                Objects.equals(nextQuestionId, answer.nextQuestionId);
     }
 
+    //    @Generated
     @Override
     public int hashCode() {
-        return Objects.hash(id, answerText, nextQuestionId);
+        return Objects.hash(answerText, id, nextQuestionId);
     }
 
-    public Long getId() {
+
+    public Integer getId() {
         return id;
     }
 
@@ -49,7 +57,7 @@ public class Answer {
         return nextQuestionId;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

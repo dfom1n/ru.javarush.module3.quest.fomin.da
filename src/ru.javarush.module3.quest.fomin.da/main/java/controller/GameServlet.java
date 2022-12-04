@@ -37,11 +37,11 @@ public class GameServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Long nextQuestionId = null;
+        Integer nextQuestionId = 1;
 
         if ((request.getParameter("nextQuestionId") != null)) {
             try {
-                nextQuestionId = Long.parseLong(request.getParameter("nextQuestionId"));
+                nextQuestionId = Integer.parseInt(request.getParameter("nextQuestionId"));
             }
             catch (NumberFormatException e){
                 e.printStackTrace();
@@ -53,7 +53,7 @@ public class GameServlet extends HttpServlet {
         StepGame stepGame = gameService.findStepsGame(nextQuestionId);
 
         Question question = stepGame.getQuestion();
-        Long questionId = question.getId();
+        Integer questionId = question.getId();
         String questionText = question.getQuestionText();
         boolean isLast = question.getIsLast();
         List<Answer> answers = stepGame.getAnswers();
@@ -94,12 +94,7 @@ public class GameServlet extends HttpServlet {
 
         if (name != null) {
             session.setAttribute("name", name);
-        } else {
-            try {
-                response.sendRedirect("game.jsp");
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+
         }
         doGet(request, response);
     }

@@ -8,9 +8,6 @@
     <title>Quest Game</title>
 </head>
 <body span style="background-color:lightgray;">
-<%--    <jsp:useBean id="Answer" class="model.Answer" scope="request" />--%>
-<%--    <jsp:getProperty name="Answer"  property="answerText"/>--%>
-<%--    <%= Answer.getAnswerText()%>--%>
 <div>
     <h2 class="text-center" style="color:darkblue;">${questionText}</h2>
     </br>
