@@ -67,26 +67,6 @@ public class Settings {
         return firstQuestionId;
     }
 
-    public List<Question> getCreaturesQuestions() {
-        return creaturesQuestions;
-    }
-
-    public List<Answer> getCreaturesAnswer() {
-        return creaturesAnswer;
-    }
-
-//    public static Settings get() {
-//        Settings settings = SETTINGS;
-//
-//        if (Objects.isNull(settings)) {
-//            synchronized (Settings.class) {
-//                if (Objects.isNull(settings = SETTINGS)) {
-//                    settings = SETTINGS = new Settings(Settings.class.getClassLoader().getResourceAsStream("Settings.yaml"));
-//                }
-//            }
-//        }
-//        return settings;
-//    }
 }
 
 

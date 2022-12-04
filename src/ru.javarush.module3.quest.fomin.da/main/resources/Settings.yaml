@@ -1,5 +1,5 @@
-description: 'Путь великого футболиста'
-gameId: 0
+description: 'Путь великого футболиста - The path of a great football player'
+gameId: 1
 firstQuestionId: 1
 creaturesQuestions:
   - id: 1

@@ -37,7 +37,7 @@ public class GameServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Long nextQuestionId = null;
+        Long nextQuestionId = 1L;
 
         if ((request.getParameter("nextQuestionId") != null)) {
             try {
