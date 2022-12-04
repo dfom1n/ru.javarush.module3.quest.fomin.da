@@ -15,28 +15,6 @@ public class Answer {
 
     public Answer(){}
 
-    @Override
-    public String toString() {
-        return "Answer{" +
-                "id=" + id +
-                ", answerText='" + answerText + '\'' +
-                ", nextQuestionId=" + nextQuestionId +
-                '}';
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Answer answer = (Answer) o;
-        return id.equals(answer.id) && answerText.equals(answer.answerText) && nextQuestionId.equals(answer.nextQuestionId);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, answerText, nextQuestionId);
-    }
-
     public Long getId() {
         return id;
     }
@@ -59,5 +37,27 @@ public class Answer {
 
     public void setNextQuestionId(Long nextQuestionId) {
         this.nextQuestionId = nextQuestionId;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Answer answer = (Answer) o;
+        return id.equals(answer.id) && answerText.equals(answer.answerText) && nextQuestionId.equals(answer.nextQuestionId);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, answerText, nextQuestionId);
+    }
+
+    @Override
+    public String toString() {
+        return "Answer{" +
+                "id=" + id +
+                ", answerText='" + answerText + '\'' +
+                ", nextQuestionId=" + nextQuestionId +
+                '}';
     }
 }

@@ -26,7 +26,7 @@
 </div>
 <form method="post" action="gameServlet" class="text-center" style="font-size:120%;">
     <label>Имя:
-        <input type="hidden" name="nextQuestionId" value="6">
+        <input type="hidden" name="nextQuestionId" value="1">
         <input type="text" name="name"><br />
     </label>
     <button class="btn btn-primary" type="submit">Submit</button>

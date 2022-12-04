@@ -16,16 +16,6 @@ public class Question {
         this.usеAnswerId = usеAnswerId;
     }
 
-    @Override
-    public String toString() {
-        return "Question{" +
-                "id=" + id +
-                ", questionText='" + questionText + '\'' +
-                ", isLast=" + isLast +
-                ", usеAnswerId=" + usеAnswerId +
-                '}';
-    }
-
     public Question(){}
 
     public Long getId() {
@@ -34,19 +24,6 @@ public class Question {
 
     public String getQuestionText() {
         return questionText;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Question question = (Question) o;
-        return isLast == question.isLast && id.equals(question.id) && questionText.equals(question.questionText) && usеAnswerId.equals(question.usеAnswerId);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, questionText, isLast, usеAnswerId);
     }
 
     public boolean getIsLast() {
@@ -71,5 +48,28 @@ public class Question {
 
     public void setUsеAnswerId(List<Long> usеAnswerId) {
         this.usеAnswerId = usеAnswerId;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Question question = (Question) o;
+        return isLast == question.isLast && id.equals(question.id) && questionText.equals(question.questionText) && usеAnswerId.equals(question.usеAnswerId);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, questionText, isLast, usеAnswerId);
+    }
+
+    @Override
+    public String toString() {
+        return "Question{" +
+                "id=" + id +
+                ", questionText='" + questionText + '\'' +
+                ", isLast=" + isLast +
+                ", usеAnswerId=" + usеAnswerId +
+                '}';
     }
 }

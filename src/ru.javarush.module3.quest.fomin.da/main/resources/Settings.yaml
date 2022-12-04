@@ -1,6 +1,6 @@
 description: 'Путь великого футболиста'
 gameId: 0
-firstQuestionId: 4
+firstQuestionId: 1
 creaturesQuestions:
   - id: 1
     questionText: 'Do you want to be the world champion in football'
