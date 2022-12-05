@@ -9,7 +9,7 @@
 </head>
 <body span style="background-color:lightgray;">
 <div>
-    <h2 class="text-center" style="color:darkblue;">${questionText}</h2>
+    <h2 class="text-center" style="color:darkred;">${questionText}</h2>
     </br>
 
     <form class="text-center" method="get" style="font-size:110%;">

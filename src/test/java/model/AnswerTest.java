@@ -1,9 +1,10 @@
+package model;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import ru.javarush.module3.quest.fomin.da.model.Answer;
 
-public class AnswerTest {
+class AnswerTest {
     Answer answer = new Answer(3L, "TestAnswer", 4L);
 
     @Test

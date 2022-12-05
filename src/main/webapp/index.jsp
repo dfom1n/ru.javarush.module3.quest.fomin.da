@@ -8,23 +8,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
 </head>
 <body>
-<h1 id="123" style="color:darkblue;" class="text-center">Пролог</h1>
-<div class="text-center" style="font-size:120%;">
-    <p>Позволь мне рассказать тебе о нашем приключении.</p>
-    <p>Ты стоишь в космическом порту и готов подняться на борт</p>
-    <p>своего корабля. Разве ты не об этом мечтал? Стать капитаном </p>
-    <p>галактического судна с экипажем, который будет совершать подвиги под твоим командованием.</p>
-    <p>Так что вперед!</p>
+<h1 id="123" style="color:darkred;" class="text-center">Пролог</h1>
+<div class="text-center" style="font-size:130%;">
+    <p>Let me tell you about a great man in sports.</p>
+    <p>This man was born in a poor family,</p>
+    <p>his parents worked several jobs just to feed all the children.</p>
+    <p>he went all the way from playing barefoot in a mash made from a bull's bladder to the World Championship finals!</p>
+    <p>It remains for you to decide whether you want to try to repeat his path!</p>
 </div>
-<h2 style="color:darkblue;" class="text-center">Знакомство с экипажем</h2>
+<h2 style="color:darkred;" class="text-center">Знакомство с экипажем</h2>
 <div class="text-center" style="font-size:120%;">
-    <p>Когда ты поднялся на борт корабля, тебя поприветствовала девушка с черной папкой в руках:</p>
-    <p>Здравствуйте командир! Я Зинаида - выша помощница. Видите? Там в углу пьет кофе</p>
-    <p>наш штурман - сержант Перегарный Шлейф, под штурвалом спит наш бортмеханик - Черный Богдан,</p>
-    <p>а вотоглафирует его Сергей Стальная Пятка - наш навигатор.</p>
-    <p>А как обращаться к вам?</p>
+    <p>You are going to have a fun adventure in a long life!</p>
+    <p>Great people will meet on your way</p>
+    <p>and you have to make difficult decisions</p>
+    <p>sometimes you have to think carefully about how they will affect your future</p>
+    <p>Go ahead</p>
+    <p>What is your name and what name will you have on your T-shirt?</p>
 </div>
-<form method="post" action="gameServlet" class="text-center" style="font-size:120%;">
+<form method="post" action="gameServlet" class="text-center" style="font-size:130%;">
     <label>Имя:
         <input type="hidden" name="nextQuestionId" value="1">
         <input type="text" name="name"><br />

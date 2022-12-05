@@ -1,6 +1,6 @@
+package services;
 
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import ru.javarush.module3.quest.fomin.da.model.Answer;
 import ru.javarush.module3.quest.fomin.da.model.Question;
@@ -10,7 +10,6 @@ import ru.javarush.module3.quest.fomin.da.services.Settings;
 
 
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.List;
 
 class SettingsTest {
